@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Firebase Basics</title>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script type ="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBM27iJ4xP_mtbQ1YsZPAQVHZ_cWaF98Oo",
+        authDomain: "dice-workout.firebaseapp.com",
+        databaseURL: "https://dice-workout-default-rtdb.firebaseio.com",
+        projectId: "dice-workout",
+        storageBucket: "dice-workout.appspot.com",
+        messagingSenderId: "76637463918",
+        appId: "1:76637463918:web:cd69379443c3d92ff44d7f",
+        measurementId: "G-KT8JLT0KS1"
+      };
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    
+
+
+  </script>
+
+
+  <script src="app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous">
+  </script>
+    
+  <style>
+   * {
+    box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      
+    }
+
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+
+    .content {
+      position: fixed;
+      text-align: center;
+      
+      color: white;
+      width: 100%;
+      margin-top: 18%;
+    }
+
+    h1 {
+      font-size: 400%;
+      font-weight: 700;
+    }
+    p{
+    
+      font-weight: 100;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+      color: #fff;
+    }
+
+  </style>
+
+  
+  </head>
+
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="pexels-mikhail-nilov-6740160.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class ="navbar" style = margin:1%>
+      <div class = "navleft">
+        <p>DICE WORKOUT</p>
+      </div>
+      <div class = "navright">
+        <button type ="button" onclick="location.href = 'index.html';">Home </button>
+        <button type ="button" onclick="location.href = 'About.html';">About  </button>
+        <button type ="button" onclick="location.href = 'Contact.html';">Contact  </button>
+      </div>
+    </div>
+     
+
+    <div class = "content">
+      <h1> Challenge Fitness</h1>
+      <p style =   font-size:1.8rem;> Virtual Fitness Motivation</p>
+      <button type ="button" onclick="location.href = 'Login.html';">Login </button>
+      <button type ="button" onclick="location.href = 'Register.html';">Register  </button>
+
+    </div>
+
+
+      </div>
+
+
+    </section>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Firebase Basics</title>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script type ="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCTaTQxzc9jK31I8zyY8tilI8rMuwtLNws",
+  authDomain: "random-workout-9df17.firebaseapp.com",
+  projectId: "random-workout-9df17",
+  storageBucket: "random-workout-9df17.appspot.com",
+  messagingSenderId: "822819615867",
+  appId: "1:822819615867:web:9e9453057864dfea575ede",
+  measurementId: "G-1CMSZK88Q9"
+};
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+ 
+  </script>
+
+  <script src="app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous">
+  </script>
+    
+    
+
+  <style>
+    body {
+      background-color: #303031;
+    }
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 50%;
+      max-height: 50%;
+    }
+    img {
+      display:block;
+      margin-left:auto;
+      margin-right: auto;
+
+    }
+
+
+  </style>
+
+  </head>
+
+  <body>
+
+
+
+    <div class ="navbar" style = margin:1%>
+      <div class = "navleft">
+        <p>DICE WORKOUT</p>
+      </div>
+      <div class = "navright">
+        <button type ="button" onclick="location.href = 'index.html';">Log Out </button>
+        <button type ="button" onclick="location.href = 'About.html';">About  </button>
+        <button type ="button" onclick="location.href = 'Contact.html';">Contact  </button>
+        <button type ="button" onclick="location.href = 'Dashboard.html';">Dashboard  </button>
+      </div>
+    </div>
+
+    <img src ="the-dice.png" width="333" height ="333">
+    <button type ="button" class ="dice" 
+      onclick= "document.getElementById('demo').innerHTML = getRndInteger(0,7)">Roll the Dice </button>
+    <script>
+        function getRndInteger(min, max) {
+          let x = Math.floor(Math.random() * (max - min)) + min;
+          if(x == 6) {
+            window.location="ex6.html"
+          }
+          if(x == 1) {
+            window.location="ex1.html"
+          }
+          if(x == 2) {
+            window.location="ex2.html"
+          }
+          if(x == 3) {
+            window.location="ex3.html"
+          }
+          if(x == 4) {
+            window.location="ex4.html"
+          }
+          if(x == 5) {
+            window.location="ex5.html"
+          }
+        }
+    </script>
+
+<div class ="navbar" style = margin:1%>
+    <div class = "diffright">
+      <button type ="button" onclick="location.href = 'ex4hard.html';">Raise Difficulty</button>
+    </div>
+    <div class = "navleft">
+      <button type ="button" onclick="location.href = 'ex4easy.html';">Lower Difficulty </button>
+    </div>
+  </div>
+  <div class = "navright">
+      <h1 style = color:white>Exercise: Complete 20 solid dips</h1>
+  </div>
+  <center><iframe width=660 height=415 src="https://www.youtube.com/embed/2z8JmcrW-As" title="YouTube video player" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen position = fixed display = block>
+  </iframe> </center>
+
+
+  </body>
+</html>
