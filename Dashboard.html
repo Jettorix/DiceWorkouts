@@ -35,7 +35,7 @@ const firebaseConfig = {
  
   </script>
 
-  <script src="app.js"></script>
+  <script src="app.js"> </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
     integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
@@ -49,7 +49,7 @@ const firebaseConfig = {
       background-color: #303031;
     }
     #myVideo {
-      position: fixed;
+      position:fixed;
       right: 0;
       bottom: 0;
       min-width: 100%; 
@@ -62,7 +62,11 @@ const firebaseConfig = {
       margin-right: auto;
 
     }
-
+    h4 {
+ 
+      margin-left: 47%;
+      color:white;
+    }
 
   </style>
 
@@ -70,7 +74,7 @@ const firebaseConfig = {
 
   <body>
 
-    <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop id="myVideo" style="margin-bottom: 1%">
       <source src="go-the-distance.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -83,40 +87,15 @@ const firebaseConfig = {
         <button type ="button" onclick="location.href = 'index.html';">Log Out </button>
         <button type ="button" onclick="location.href = 'About.html';">About  </button>
         <button type ="button" onclick="location.href = 'Contact.html';">Contact  </button>
+        <button type ="button" class ="current" onclick="location.href = 'Dashboard.html';">Dashboard  </button>
+        <button type ="button" onclick=workouterror() > Workouts  </button>
       </div>
     </div>
-
-    <img src ="the-dice.png" width="333" height ="333" alt="a dice with six sides">
-    <button type ="button" class ="dice" 
+    <h4>Six Sided Dice</h4>
+    <img src ="the-dice.png" width="300" height ="300">
+   
+    <button type ="button" class ="dice" margin-bottom=2%;
       onclick= "document.getElementById('demo').innerHTML = getRndInteger(0,7)">Roll the Dice </button>
-    <script>
-        function getRndInteger(min, max) {
-          let x = Math.floor(Math.random() * (max - min)) + min;
-          if(x == 6) {
-            window.location="ex6.html"
-            alert("You got a ", x)
-          }
-          if(x == 1) {
-            window.location="ex1.html"
-            alert("You got a ", x)
-          }
-          if(x == 2) {
-            window.location="ex2.html"
-            alert("You got a ", x)
-          }
-          if(x == 3) {
-            window.location="ex3.html"
-            alert("You got a ", x)
-          }
-          if(x == 4) {
-            window.location="ex4.html"
-            alert("You got a ", x)
-          }
-          if(x == 5) {
-            window.location="ex5.html"
-            alert("You got a ", x)
-          }
-        }
-    </script>
+
   </body>
 </html>
