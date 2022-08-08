@@ -32,7 +32,6 @@ const firebaseConfig = {
     const auth = getAuth();
     const database = getDatabase(app);
 
- 
   </script>
 
   <script src="app.js"></script>
@@ -81,43 +80,15 @@ const firebaseConfig = {
         <button type ="button" onclick="location.href = 'About.html';">About  </button>
         <button type ="button" onclick="location.href = 'Contact.html';">Contact  </button>
         <button type ="button" onclick="location.href = 'Dashboard.html';">Dashboard  </button>
+        <button type ="button" class ="current" onclick=workouterror() > Workouts  </button>
       </div>
     </div>
-
+  
     <img src ="the-dice.png" width="333" height ="333">
     <button type ="button" class ="dice" 
       onclick= "document.getElementById('demo').innerHTML = getRndInteger(0,7)">Roll the Dice </button>
-    <script>
-        function getRndInteger(min, max) {
-          let x = Math.floor(Math.random() * (max - min)) + min;
-          if(x == 6) {
-            window.location="ex6.html"
-            alert("You got a 6");
-          }
-          if(x == 1) {
-            window.location="ex1.html"
-            alert("You got a 1");
-          }
-          if(x == 2) {
-            window.location="ex2.html"
-           alert("You got a 2");
-          }
-          if(x == 3) {
-            window.location="ex3.html"
-            alert("You got a 3");
-          }
-          if(x == 4) {
-            window.location="ex4.html"
-            alert("You got a 4");
-          }
-          if(x == 5) {
-            window.location="ex5.html"
-            alert("You got a 5");
-          }
-        }
-    </script>
 
-    <div class ="navbar" style = margin:1%>
+    <div class ="navright" style = margin:1%>
       <div class = "diffright">
         <button type ="button" onclick="location.href = 'ex1hard.html';">Raise Difficulty</button>
       </div>
@@ -125,14 +96,20 @@ const firebaseConfig = {
         <button type ="button" onclick="location.href = 'ex1easy.html';">Lower Difficulty </button>
       </div>
     </div>
-    <div class = "navright">
+    <div class = "navright" style = margin-top:8%;margin-right:35%;>
         <h1 style = color:white>Exercise: Complete 20 perfect push ups</h1>
     </div>
-    <center><iframe width=660 height=415 src="https://www.youtube.com/embed/IODxDxX7oi4" title="YouTube video player" 
+    <div class="center">
+    
+        <h1>Intermediate</h1>
+     
+    </div>
+    <iframe width=660 height=415 src="https://www.youtube.com/embed/IODxDxX7oi4" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen position = fixed display = block>
-    </iframe> </center>
+    </iframe> 
 
-
+    <script>
+    </script>
   </body>
 </html>
